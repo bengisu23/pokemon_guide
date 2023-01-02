@@ -1,0 +1,111 @@
+body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    background-image:  linear-gradient(to right, rgb(65, 10, 65) 0%, rgb(43, 43, 43));
+}
+
+
+h1{
+    color: white;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    text-shadow: 4px 2px 2px rgb(0, 0, 0, 1);
+}
+.search{
+    position: relative;
+}
+.searchInput{
+    font-family: inherit;
+    border: none;
+    background-color: transparent;
+    font-size: 14px;
+    padding: 10px;
+    width: 15px;
+    height: 10px;
+    border-radius: 5px;
+    transition: width 0.3s ease;
+}
+.searchInput, 
+.searchBtn:focus{
+    outline: none;
+}
+.searchBtn{
+    background-color: blueviolet;
+    color: white;
+    font-size: 1.5rem;
+    border: none;
+    top: 0;
+    left: 0;
+    position: absolute;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+.search.active .searchInput{
+    width: 170px;
+    background-color: white;
+}
+.search.active .searchBtn{
+    transform: translateX(160px);
+    background-color: white;
+    color: blueviolet;
+}
+
+
+/* pokedex part*/
+
+
+.poke-container{
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 80%;
+    align-items: center;
+}
+.pokemon{
+    margin: 10px;
+    padding: 20px;
+    box-shadow: rgb(0, 0, 0, 0.17) 0px -20px 20px 0px inset,
+    rgba(0, 0, 0, 0.15) 0px -30px 30px 0px inset,
+    rgba(0, 0, 0, 0.1) 0px -70px 30px 0px inset;
+    color: white;
+    border-radius: 10px;
+}
+.image-container{
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50% 30% 60% 40% ;
+}
+.image-container img{
+    width: 130px;
+    opacity: 0.75;
+    transition: all 0.3s ease;
+}
+.pokemon:hover .image-container img{
+    opacity: 1;
+    transform: scale(1.40);
+}
+.poke-info{
+    margin-top: 10px;
+}
+.poke-id{
+    background-color:  rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    padding: 5px 8px;
+    font-size: 0.85rem;
+}
+.poke-name{
+    letter-spacing: 1px;
+    margin: 15px 0px 10px;
+    text-transform: capitalize;
+}
+.small small{
+    padding: 0px 5px;
+}
+.poke-type{
+    margin-top: 8px;
+}
